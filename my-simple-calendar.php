@@ -312,7 +312,8 @@ function ccal_render_front_view() {
                 </tr>
             </tbody>
         </table>
-
+        <p class="text-align:cneter; padding:4px; font-size:small;"><a href="https://garage034.com/mysimplecalendar.html" target="_blank">this plugin made by Garage034.com</a>
+</p>
         <div class="sec-legend-area">
             <?php foreach($events as $id => $ev): ?>
                 <span class="legend-item"><span class="legend-dot" style="background-color:<?php echo esc_attr($ev['color']); ?>; border-radius:3px;"></span><?php echo esc_html($ev['label']); ?></span>
