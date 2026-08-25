@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: My Simple Calendar Plus
+ * Plugin Name: My Simple Calendar
  * Description: イベント無制限・カラーピッカー・イベント別形状選択機能付きカレンダー
  * Version: 5.3
  * Author: Onozaki Masashi[Design Studio Garage034.com]
