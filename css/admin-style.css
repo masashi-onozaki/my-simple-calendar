@@ -1,0 +1,85 @@
+.ccal-name-settings {
+  background: #fff;
+  padding: 20px;
+  border-left: 4px solid #007cba;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.ccal-palette-area {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.p-lbl {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+.ccal-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin-bottom: 15px;
+}
+.ccal-admin-header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+.ccal-admin-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.ccal-admin-table th,
+.ccal-admin-table td {
+  border: 1px solid #ddd;
+  width: 14.28%;
+  vertical-align: top;
+  text-align: center;
+}
+.ccal-admin-table th {
+  background: #f8f9fa;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.ccal-admin-table td {
+  height: 100px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.ccal-admin-table td:hover {
+  opacity: 0.8;
+}
+.ccal-admin-table td.empty {
+  background: #f9f9f9;
+  cursor: default;
+}
+.ccal-cell-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.d-num {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: auto;
+}
+.cell-time-input {
+  width: 90%;
+  font-size: 11px;
+  padding: 2px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 auto;
+}
