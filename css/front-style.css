@@ -1,0 +1,232 @@
+.sec-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.ccal-visual-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+.header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.nav-arrow-btn {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.nav-arrow-btn:hover {
+  color: #333;
+  border-color: #333;
+}
+.big-month-num {
+  font-size: 56px;
+  font-weight: 900;
+  color: #222;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.small-month-eng {
+  font-size: 18px;
+  font-weight: bold;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.outline-year-text {
+  font-size: 48px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px #ddd;
+  line-height: 1;
+}
+.sec-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.sec-table th {
+  font-size: 12px;
+  color: #aaa;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.sec-table th.sun {
+  color: #ff6b6b;
+}
+.sec-table th.sat {
+  color: #4dabf7;
+}
+
+/* 日付セルのベース（背景はシンプルに白、枠線のみ） */
+.sec-table td {
+  text-align: center;
+  vertical-align: middle;
+  height: 70px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+.sec-table td.empty {
+  background-color: #fafafa;
+  border: none;
+}
+.sec-table td.has-event {
+  cursor: pointer;
+}
+
+/* 通常の日付数字 */
+.sec-table .sec-num {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+/* 1. 円形（丸） */
+.sec-table .sec-num.shape-circle {
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. 角丸四角 */
+.sec-table .sec-num.shape-rounded {
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. 角の取れた三角（おにぎり・タグ風） */
+.sec-table .sec-num.shape-triangle {
+  border-radius: 50% 50% 15% 50%;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ホバー時の演出 */
+.sec-table td.has-event:hover .sec-num {
+  transform: scale(1.1);
+}
+.sec-table td.has-event:hover .sec-num.shape-triangle {
+  transform: rotate(-45deg) scale(1.1);
+}
+
+.sec-legend-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: center;
+}
+.legend-item {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Modal */
+.sec-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+.sec-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.sec-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s;
+}
+.sec-modal-close:hover {
+  color: #333;
+}
+#sec-modal-date {
+  margin-top: 0;
+  font-size: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.sec-modal-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.sec-modal-item h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+.sec-modal-time {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+}
